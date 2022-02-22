@@ -13,6 +13,7 @@
 
   input {
     border: none;
+    border: 2px solid #170027;
     background: #170027;
     width: 230px;
     height: 44px;
@@ -21,9 +22,15 @@
     color: #fbf6ff;
     font-family: Roboto;
     font-size: 14px;
+    transition: border-color 0.3s;
 
     &::placeholder {
       color: #fbf6ff;
+    }
+
+    &:focus {
+      border: 2px solid #9e6dc2;
+      border-right: #170027;
     }
   }
 
