@@ -1,7 +1,13 @@
 import type { NextPage } from 'next';
 
+import { Header } from '@components/Header';
+
 const Home: NextPage = () => {
-  return <h1>Hello World</h1>;
+  return (
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <Header />
+    </div>
+  );
 };
 
 export default Home;

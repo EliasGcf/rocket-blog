@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1170px;
+  width: 100%;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+
+  input {
+    border: none;
+    background: #170027;
+    width: 230px;
+    height: 44px;
+    padding: 0 26px 0 26px;
+    border-radius: 4px 0 0 4px;
+    color: #fbf6ff;
+    font-family: Roboto;
+    font-size: 14px;
+
+    &::placeholder {
+      color: #fbf6ff;
+    }
+  }
+
+  button {
+    width: 70px;
+    height: 44px;
+    background: #9e6dc2;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    transition: opacity 0.3s ease-in-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.navLink {
+  color: #fff;
+  font-size: 18px;
+  font-family: Roboto;
+
+  a {
+    position: relative;
+  }
+
+  a + a {
+    margin-left: 32px;
+  }
+}
+
+.navLinkActive {
+  font-weight: bold;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 2px;
+    height: 100%;
+    left: -6px;
+    background: #4fff4b;
+  }
+}
