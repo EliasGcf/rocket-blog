@@ -5,6 +5,7 @@
 
   a {
     position: relative;
+    pointer-events: none;
   }
 
   a + a {
@@ -16,7 +17,7 @@
   font-weight: bold;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
 
     width: 2px;
