@@ -17,7 +17,7 @@ class MyDocument extends Document {
           />
         </Head>
 
-        <body style={{ padding: '64px 136px' }}>
+        <body>
           <Main />
           <NextScript />
         </body>
