@@ -5,6 +5,12 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+html,
+body,
+#__next {
+  height: 100vh;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
 }

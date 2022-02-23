@@ -52,3 +52,46 @@
     width: 570px;
   }
 }
+
+.postsSection {
+  width: 100%;
+  height: 100%;
+  background: #fbf6ff;
+  display: flex;
+  justify-content: center;
+
+  padding: 64px 136px;
+
+  > div {
+    width: 100%;
+    max-width: 1170px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.divider {
+  background: #f2e7fa;
+  height: 1px;
+  margin: 24px 0;
+}
+
+.mainPost {
+  display: flex;
+  flex-direction: column;
+  margin-right: 16px;
+
+  img {
+    width: 569px;
+    height: 342px;
+  }
+
+  p {
+    max-width: 569px;
+  }
+}
+
+.asidePosts {
+  max-width: 472px;
+}
