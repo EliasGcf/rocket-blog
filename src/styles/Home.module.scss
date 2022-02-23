@@ -28,13 +28,17 @@
   div {
     margin-right: 30px;
 
-    h1 {
+    a {
       font-size: 36px;
       font-family: Poppins;
       color: #9e6dc2;
       font-weight: bold;
       max-width: 569px;
       line-height: 54px;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     p {
@@ -58,7 +62,8 @@
   height: 100%;
   background: #fbf6ff;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
   padding: 64px 136px;
 
@@ -94,4 +99,20 @@
 
 .asidePosts {
   max-width: 472px;
+}
+
+.footerPosts {
+  margin-top: 72px;
+}
+
+.footerPostContainer {
+  display: flex;
+  flex-direction: column;
+
+  width: 370px;
+
+  img {
+    width: 370px;
+    height: 260px;
+  }
 }
