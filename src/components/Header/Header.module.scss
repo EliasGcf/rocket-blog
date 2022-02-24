@@ -5,6 +5,18 @@
 
   max-width: 1170px;
   width: 100%;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+
+    nav {
+      margin-top: 16px;
+    }
+
+    .inputContainer {
+      margin-top: 32px;
+    }
+  }
 }
 
 .inputContainer {
