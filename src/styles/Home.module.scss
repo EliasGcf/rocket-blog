@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   background: #290742;
-  padding: 64px 136px;
+  padding: 64px 16px;
 
   border-bottom: 6px solid #4fff4b;
 
@@ -54,6 +54,26 @@
   img {
     height: 346px;
     width: 570px;
+  }
+
+  @media (max-width: 1016px) {
+    align-items: center;
+    flex-direction: column;
+
+    div {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      a {
+        display: block;
+        max-width: 500px;
+      }
+    }
+
+    img {
+      margin-top: 30px;
+    }
   }
 }
 
