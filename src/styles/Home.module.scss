@@ -52,15 +52,17 @@
   }
 
   img {
-    height: 346px;
-    width: 570px;
+    width: 100%;
+    max-width: 570px;
   }
 
   @media (max-width: 1016px) {
     align-items: center;
     flex-direction: column;
+    justify-content: center;
 
     div {
+      margin-right: 0px;
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -68,6 +70,11 @@
       a {
         display: block;
         max-width: 500px;
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
       }
     }
 
@@ -85,7 +92,7 @@
   align-items: center;
   flex-direction: column;
 
-  padding: 64px 136px;
+  padding: 64px 16px;
 
   > div {
     width: 100%;
@@ -93,6 +100,24 @@
 
     display: flex;
     justify-content: space-between;
+  }
+
+  @media (max-width: 1000px) {
+    > div {
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .mainPost {
+      margin-right: 0;
+    }
+
+    .asidePosts {
+      width: 100%;
+      max-width: 569px;
+
+      margin-top: 32px;
+    }
   }
 }
 
@@ -107,9 +132,11 @@
   flex-direction: column;
   margin-right: 16px;
 
+  width: 100%;
+  max-width: 569px;
+
   img {
-    width: 569px;
-    height: 342px;
+    width: 100%;
   }
 
   p {
@@ -123,6 +150,26 @@
 
 .footerPosts {
   margin-top: 72px;
+
+  @media (max-width: 1150px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .footerPostContainer + .footerPostContainer {
+      margin-top: 16px;
+    }
+
+    .footerPostContainer {
+      width: 100%;
+      max-width: 569px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
 }
 
 .footerPostContainer {
