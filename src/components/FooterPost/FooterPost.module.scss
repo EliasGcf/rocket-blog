@@ -1,0 +1,25 @@
+.footerPost {
+  display: flex;
+  flex-direction: column;
+
+  width: 370px;
+
+  img {
+    width: 370px;
+    height: 260px;
+  }
+
+  @media (max-width: 1150px) {
+    width: 100%;
+    max-width: 569px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    & + .footerPost {
+      margin-top: 16px;
+    }
+  }
+}

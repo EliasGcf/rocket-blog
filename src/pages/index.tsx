@@ -1,11 +1,11 @@
 import type { NextPage } from 'next';
 
-import { Header } from '@components/Header';
-import { PostDate } from '@components/PostDate';
-import { PostTitle } from '@components/PostTitle';
-import { PostDescription } from '@components/PostDescription';
+import { HeaderSection } from '@components/HeaderSection';
+import { FooterPost } from '@components/FooterPost';
+import { MainPost } from '@components/MainPost';
+import { AsidePost } from '@components/AsidePost/AsidePost';
 
-import styles, { divider } from '@styles/Home.module.scss';
+import styles from '@styles/Home.module.scss';
 
 type Post = {
   id: string;
@@ -24,35 +24,11 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
 
   return (
     <div className={styles.homeContainer}>
-      <section className={styles.headerSection}>
-        <Header />
-
-        {headerPost && (
-          <div className={styles.headerBanner}>
-            <div>
-              <a>{headerPost.title}</a>
-
-              <p>{headerPost.description}</p>
-            </div>
-
-            <img src={headerPost.imageUrl} alt={headerPost.title} />
-          </div>
-        )}
-      </section>
+      <HeaderSection post={headerPost} />
 
       <main className={styles.postsSection}>
         <div>
-          {mainPost && (
-            <div className={styles.mainPost}>
-              {mainPost.imageUrl && <img src={mainPost.imageUrl} alt={mainPost.title} />}
-
-              <PostDate>{mainPost.createdAt}</PostDate>
-
-              <PostTitle url="/">{mainPost.title}</PostTitle>
-
-              <PostDescription>{mainPost.description}</PostDescription>
-            </div>
-          )}
+          {mainPost && <MainPost post={mainPost} />}
 
           <div className={styles.asidePosts}>
             {restPosts.map((post, index) => {
@@ -60,9 +36,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
 
               return (
                 <>
-                  <PostDate>{post.createdAt}</PostDate>
-                  <PostTitle url="/">{post.title}</PostTitle>
-                  <PostDescription>{post.description}</PostDescription>
+                  <AsidePost post={post} />
                   {index === 0 && <div className={styles.divider} />}
                 </>
               );
@@ -74,17 +48,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
           {restPosts.map((post, index) => {
             if (index < 2 || index > 4) return null;
 
-            return (
-              <div key={post.id} className={styles.footerPostContainer}>
-                {post.imageUrl && <img src={post.imageUrl} alt={post.title} />}
-
-                <PostDate>{post.createdAt}</PostDate>
-
-                <PostTitle url="/">{post.title}</PostTitle>
-
-                <PostDescription>{post.description}</PostDescription>
-              </div>
-            );
+            return <FooterPost key={post.id} post={post} />;
           })}
         </div>
       </main>
